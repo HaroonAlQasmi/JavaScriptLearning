@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SumOfNumber</title>
+    </head>
+    <body>
+        <h1>Sum Of Number Inputted and All lesser Natural Numbers</h1>
+        <p>Click the button to check To add a number</p>
+        <button onclick="SumOfNumber()">Check Number</button>
+        <p id="result"></p>
+    </body>
+    <script>
+        function SumOfNumber() {
+            let number = prompt("Enter a number:");
+            let sum = 0;
+            for (let i = 1; i <= number; i++) {
+                sum += i;
+            }
+            alert("The Sum is: " + sum);
+        }
+    </script>
+</html>
