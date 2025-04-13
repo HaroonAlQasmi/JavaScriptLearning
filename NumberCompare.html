@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>NumberComparer</title>
+    </head>
+    <body>
+        <h1>Get the larger of two numbers</h1>
+        <p>Click the button to compare numbers</p>
+        <button onclick="compare()">Compare Numbers</button>
+    </body>
+    <script>
+        const compare = () => {
+            let number1 = prompt("Enter the first number:");
+            let number2 = prompt("Enter the second number:");
+            if (number1 > number2) {
+                alert(number1 + " is the larger number")
+            }
+            else if (number2 > number1) {
+                alert(number2 + " is the larger number")
+            }
+            else if (number1 == number2) {
+                alert("The Numbers are equal")
+            }
+            else {
+                alert("Error Worng input")
+            }
+        }
+    </script>
+</html>
