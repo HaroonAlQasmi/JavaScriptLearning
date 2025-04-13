@@ -5,12 +5,12 @@
     </head>
     <body>
         <h1>Sum Of Number Inputted and All lesser Natural Numbers</h1>
-        <p>Click the button to check To add a number</p>
-        <button onclick="SumOfNumber()">Check Number</button>
+        <p>Click the button To add the numbers</p>
+        <button onclick="SumOfNumber()">Get sum</button>
         <p id="result"></p>
     </body>
     <script>
-        function SumOfNumber() {
+        const SumOfNumber = () => {
             let number = prompt("Enter a number:");
             let sum = 0;
             for (let i = 1; i <= number; i++) {
