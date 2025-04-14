@@ -19,22 +19,22 @@ function sumOfNum (){
     alert("The sum of "+userInput+" is "+sum)
 }
 function fizzBuzz (){
-    let fizzCount = null;
-    let buzzCount = null;
-    let fizzBuzzCount = null;
-    let nNumCount = null;
+    let fizzCount = "";
+    let buzzCount = "";
+    let fizzBuzzCount = "";
+    let nNumCount = "";
     for (let i=1; i <= 100 ; i++){
-        if (i % 3 == 0){
+        if (i % 3 == 0 && i % 5 == 0){
             fizzCount += " Fizz ";
         }
         else if (i % 5 == 0){
             buzzCount += " Buzz ";
         }
-        else if (i % 3 == 0 && i % 5 == 0){
+        else if (i % 3 == 0){
             fizzBuzzCount += " FizzBuzz ";
         } 
         else{
-            nNumCount+=(i.toString+",");
+            nNumCount+= i.toString() + ",";
         }
     }
     alert(fizzCount + buzzCount + fizzBuzzCount + nNumCount);
