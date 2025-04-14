@@ -1,13 +1,13 @@
 function evenOddChecker (){
-    let userInput = parseInt(prompt("Enter a number to check whether Even or Odd: "));
-    if (userInput % 2 == 0) {
-        alert(userInput + " is an even number");
+    let userInput = prompt("Enter a number to check whether Even or Odd: ");
+    if  (isNaN(userInput)) {
+        alert("Wrong input");
     }
-    else if (userInput % 2 != 0) {
+    else if (parseInt(userInput) % 2 != 0) {
         alert(userInput + " is an Odd number");
     }
-    else {
-        alert("Wrong input");
+    else if  (parseInt(userInput) % 2 == 0){
+        alert(userInput + " is an even number");
     }
 }
 function sumOfNum (){
@@ -44,19 +44,19 @@ function findLargestNum (){
     let userArray = userInput.split(",").map(num => parseFloat(num.trim()));
     let currentLargestNumber = 0;
     for (let i = 0; i < userArray.length;i++){
-        if (i > currentLargestNumber){
-            currentLargestNumber = i;
+        if (userArray[i] > currentLargestNumber){
+            currentLargestNumber = userArray[i];
         }
     }
     alert("The Largest Number is " + currentLargestNumber);
 }
 function vowelCounter(){
     let userInput = prompt("Enter a string to check for vowels: ");
-    for (let i = 0; i > userInput.length;i++){
-        let vowelCount = 0;
+    let vowelCount = 0; 
+    for (let i = 0; i < userInput.length; i++){ 
         if (["a", "e", "i", "o", "u"].includes(userInput[i].toLowerCase())){
             vowelCount += 1;
         }
     }
-    alert("The vowel count is "+vowelCount);
+    alert("The vowel count is "+ vowelCount);
 }
