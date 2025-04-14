@@ -19,10 +19,10 @@ function sumOfNum (){
     alert("The sum of "+userInput+" is "+sum)
 }
 function fizzBuzz (){
-    fizzCount = null
-    buzzCount = null
-    fizzBuzzCount = null
-    nNumCount = null
+    let fizzCount = null
+    let buzzCount = null
+    let fizzBuzzCount = null
+    let nNumCount = null
     for (let i=1; i > 100 ; i++){
         if (i % 3 == 0){
             fizzCount =+ " Fizz "
