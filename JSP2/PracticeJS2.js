@@ -18,3 +18,12 @@ function positiveFilter() {
     }
     alert("The positive numbers are: " + positiveArray);
 }
+function arraySum() {
+    let userInput = prompt("Enter numbers and seperate them using ',':");
+    let userArray = userInput.split(",").map(Number);
+    let sum = 0;
+    for(let i = 0; i < userArray.length;i++){
+        sum += userArray[i];
+    }
+    alert("The sum of the array is: "+sum);
+}
