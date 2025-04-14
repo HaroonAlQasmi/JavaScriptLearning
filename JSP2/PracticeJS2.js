@@ -27,3 +27,17 @@ function arraySum() {
     }
     alert("The sum of the array is: "+sum);
 }
+function wordCounter() {
+    let userInput = prompt("Enter a sentance:");
+    let userArray = userInput.split(" ");
+    let wordCount = {};
+    for(let i = 0; i < userArray.length;i++){
+        if (userArray[i] in wordCount){
+            wordCount[userArray[i]] += 1;
+        }
+        else{
+            wordCount[userArray[i]] = 1;
+        }
+    }
+    alert("The Words count is: "+JSON.stringify(wordCount));
+}
