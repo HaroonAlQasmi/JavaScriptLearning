@@ -10,3 +10,11 @@ function evenOddChecker (){
         alert("Wrong input")
     }
 }
+function sumOfNum (){
+    userInput = parseInt(prompt("Enter a number to get the sum:"))
+    sum = 0
+    for (let i = 0; i <= userInput; i++){
+        sum =+ i
+    }
+    alert("The sum of "+userInput+" is "+sum)
+}
