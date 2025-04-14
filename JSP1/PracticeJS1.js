@@ -18,3 +18,24 @@ function sumOfNum (){
     }
     alert("The sum of "+userInput+" is "+sum)
 }
+function fizzBuzz (){
+    fizzCount = null
+    buzzCount = null
+    fizzBuzzCount = null
+    nNumCount = null
+    for (let i=1; i > 100 ; i++){
+        if (i % 3 == 0){
+            fizzCount =+ " Fizz "
+        }
+        else if (i % 5 == 0){
+            buzzCount =+ " Buzz "
+        }
+        else if (i % 3 == 0 & i % 5 == 0){
+            fizzBuzzCount =+ " FizzBuzz "
+        } 
+        else{
+            nNumCount=+(string(i)+",")
+        }
+    }
+    alert(fizzCount + buzzCount + fizzBuzzCount + nNumCount)
+}
