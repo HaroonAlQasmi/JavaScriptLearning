@@ -31,3 +31,9 @@ function doublingNums(arr){
     }
     console.log(arr);
 }
+function getData(callback){
+    setTimeout(callback, 2000);
+}
+function dataFun(data){
+    console.log("Received:",data);
+}
