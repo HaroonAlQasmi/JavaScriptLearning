@@ -37,3 +37,14 @@ function getData(callback){
 function dataFun(data){
     console.log("Received:",data);
 }
+function login(callback){
+    console.log("Login Successful")
+    setTimeout(callback, 2000);
+}
+function fetchUser(callback){
+    console.log("User Name fetched")
+    setTimeout(callback, 2000);
+}
+function fetchSettings(){
+    console.log("Settings Fetched")
+}
