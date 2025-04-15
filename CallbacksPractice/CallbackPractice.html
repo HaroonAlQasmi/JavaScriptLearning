@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CallbackPractice</title>
+        <script src="CallbackPractice.js" defer></script>
+    </head>
+    <body>
+        <h1>Below Are buttons to call callback functions</h1>
+        <button onclick="greet('Haroon',greetName)">GreetInConsole</button>
+        <button onclick="calculate(3, 'add', 5)">CalcInConsole</button>
+        <button onclick="processArray([1,2,3],doublingNums)">ProcessInConsole</button>
+        <button onclick="getData(()=>dataFun('This is some good data'))">GetDataInConsole</button>
+        <button onclick="login(()=>fetchUser(()=>fetchSettings()))">LoginConsole</button>
+        <button onclick="divide(4,0,correctDivision,errorDivision)">DivideInConsole</button>
+    </body>
+</html>
