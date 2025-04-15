@@ -48,3 +48,18 @@ function fetchUser(callback){
 function fetchSettings(){
     console.log("Settings Fetched")
 }
+function divide(a,b,successCallback,errorCallBack){
+    if (b == 0){
+        errorCallBack()
+    }
+    else{
+        successCallback(a,b)
+    }
+}
+function errorDivision(){
+    console.log("Wrong input")
+}
+function correctDivision(a,b){
+    let divided = a / b;
+    console.log("The answer is ", divided)
+}
