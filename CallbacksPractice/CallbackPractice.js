@@ -1,6 +1,8 @@
 function greet(name,callback){
+    callback(name);
+}
+function greetName(name){
     console.log(`Hello, ${name}!`);
-    callback();
 }
 function calculate(a,operation,b){
     let answer = 0;
@@ -19,4 +21,13 @@ function calculate(a,operation,b){
             break;
     }
     console.log(answer);
+}
+function processArray(arr,callback){
+    callback(arr);
+}
+function doublingNums(arr){
+    for(let i=0;i<arr.length;i++){
+        arr[i] = arr[i] * 2;
+    }
+    console.log(arr);
 }
