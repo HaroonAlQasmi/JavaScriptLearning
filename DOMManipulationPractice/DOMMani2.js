@@ -56,3 +56,7 @@ function clickBoxShow(){
         inputType.type = "password";
     }
 }
+function scream(){
+    let textToScream = document.getElementById("scream").value;
+    document.getElementById("screamed").innerText = textToScream.toUpperCase();
+}
