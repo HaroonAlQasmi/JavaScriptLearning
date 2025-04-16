@@ -25,3 +25,7 @@ function disableButton(){
     document.getElementById("DB").disabled = true;
     document.getElementById("DB").innerText = "IamDead";
 }
+function inputBorderColor(){
+    let myInput = document.getElementsByTagName("input")[0];
+    myInput.style.borderColor = "gold";
+}
