@@ -33,3 +33,13 @@ function displayText(){
     let LVtext = document.getElementById("LVtext").value;
     alert("The lions appriciate these words: " + LVtext);
 }
+function backgroundColorChanger() {
+    let body = document.body;
+    if (body.style.backgroundColor === "white") {
+        body.style.backgroundColor = "green"; // Change background to green
+    } else if (body.style.backgroundColor === "green") {
+        body.style.backgroundColor = "white"; // Change background to white
+    } else {
+        body.style.backgroundColor = "white"; // Default to white if no color is set
+    }
+}
