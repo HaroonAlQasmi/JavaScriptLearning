@@ -43,3 +43,7 @@ function backgroundColorChanger() {
         body.style.backgroundColor = "white"; // Default to white if no color is set
     }
 }
+function ilCC(id){
+    let ilC = document.getElementById(id);
+    ilC.style.backgroundColor = "brown";
+}
