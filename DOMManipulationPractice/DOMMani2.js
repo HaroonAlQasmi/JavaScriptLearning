@@ -16,3 +16,8 @@ function pResize(){
         myP.style.fontSize = "14px";
     }
 }
+let clickCount = 0;
+function clickCounter(){
+    clickCount += 1;
+    document.getElementById("LLV").innerText = "You love lions this much: "+clickCount;
+}
