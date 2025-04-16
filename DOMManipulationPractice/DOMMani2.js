@@ -65,3 +65,14 @@ function changeThroughC(){
     let toChange = document.getElementById("screamed");
     toChange.style.backgroundColor = colorValue;
 }
+function resetSection(){
+    let intendedSection = prompt("Enter a section to reload like (div,p,h1,title)");
+    let reload = new XMLHttpRequest();
+    reload.open("GET","section-content.html",true);
+    reload.onload = function (){
+        if (reload.status === 200){
+            document.getElementsByTagName(intendedSection)[0].innerHTML = reload.responseText;
+        }
+        reload.send
+    }
+}
