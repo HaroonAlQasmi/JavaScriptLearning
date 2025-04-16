@@ -29,3 +29,7 @@ function inputBorderColor(){
     let myInput = document.getElementsByTagName("input")[0];
     myInput.style.borderColor = "gold";
 }
+function displayText(){
+    let LVtext = document.getElementById("LVtext").value;
+    alert("The lions appriciate these words: " + LVtext);
+}
