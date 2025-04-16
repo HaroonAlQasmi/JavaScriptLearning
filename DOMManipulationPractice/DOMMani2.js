@@ -60,3 +60,8 @@ function scream(){
     let textToScream = document.getElementById("scream").value;
     document.getElementById("screamed").innerText = textToScream.toUpperCase();
 }
+function changeThroughC(){
+    let colorValue = document.getElementById("help").value;
+    let toChange = document.getElementById("screamed");
+    toChange.style.backgroundColor = colorValue;
+}
