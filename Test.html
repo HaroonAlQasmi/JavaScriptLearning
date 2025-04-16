@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+<body>
+    <div id ="container"></div>
+        <p id="txt" style="color: red; font-size: 28px;">lorum ipsum</p><hr>
+        <p id="txt2">:-)</p><hr>
+        <p id="txt3">-_-</p>
+    </div>
+    <button onclick="changecolor()">Press</button>
+    <button onclick="changetxt2()">Press</button>
+    <button onclick="changetxt3()">Press</button>
+    <button onclick="addElement()">Add</button>
+    <button onclick="removeElement()">Remove</button>
+    
+    <script>
+
+        function changecolor(){
+            if ((document.getElementById("txt").style.color == "red") && (document.getElementById("txt").style.fontSize == 28  + "px")){
+                document.getElementById("txt").style.color = "blue";
+                document.getElementById("txt").style.fontSize = 42  + "px";
+            }
+            else if ((document.getElementById("txt").style.color == "blue") && (document.getElementById("txt").style.fontSize == 42  + "px")){
+                document.getElementById("txt").style.color = "red";
+                document.getElementById("txt").style.fontSize = 28  + "px";
+            }
+        }
+        function changetxt2(){
+            if (document.getElementById("txt2").innerText == ":-)") {
+                console.dir(document.getElementById("txt2").innerText = ":-(");
+            }
+            else if (document.getElementById("txt2").innerText == ":-(") {
+                console.dir(document.getElementById("txt2").innerText = ":-)");
+            }
+        }
+        function changetxt3(){
+            if (document.getElementById("txt3").innerText == "^-^") {
+                console.dir(document.getElementById("txt3").innerText = "-_-");
+            }
+            else if (document.getElementById("txt3").innerText == "-_-") {
+                console.dir(document.getElementById("txt3").innerText = "^-^");
+            }
+        }
+        function addElement(){
+            let newParagraph = document.createElement("p");
+            newParagraph.innerText = "hallo world";
+            document.getElementById("container").appendChild(newParagraph);
+        }
+        function removeElement(){
+            let container = document.getElementById("container");
+            if (container.lastChild) {
+                container.removeChild(container.lastChild);
+            }
+        }
+    </script>
+    </script>
+</body>
+</html>
