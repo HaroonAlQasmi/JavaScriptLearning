@@ -21,3 +21,7 @@ function clickCounter(){
     clickCount += 1;
     document.getElementById("LLV").innerText = "You love lions this much: "+clickCount;
 }
+function disableButton(){
+    document.getElementById("DB").disabled = true;
+    document.getElementById("DB").innerText = "IamDead";
+}
