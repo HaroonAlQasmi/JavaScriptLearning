@@ -6,5 +6,13 @@ function changeAlt(){
     img.setAttribute("alt","there was supposed to be a lion looking man here");
 }
 function changeMe(){
-    document.getElementById("chB").innerText = "I am a changed button";
+    document.getElementById("chB").innerText = "Clicked!";
+}
+function pResize(){
+    let myP = document.getElementsByTagName("p")[0];
+    if (myP.style.fontSize === "14px") {
+        myP.style.fontSize = "24px"; 
+    } else if (myP.style.fontSize === "24px") {
+        myP.style.fontSize = "14px";
+    }
 }
