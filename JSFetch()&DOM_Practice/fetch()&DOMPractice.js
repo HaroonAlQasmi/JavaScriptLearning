@@ -30,3 +30,30 @@ function getPosts(){
         });
     })
 }
+function postText() {
+    let userTitle = document.getElementById("userTitle").value; // Use .value to get input value
+    let userTextArea = document.getElementById("userTextArea").value; // Use .value to get textarea value
+
+    // Create the data object to send
+    const postData = {
+        title: userTitle,
+        body: userTextArea,
+        userId: 1, // Example user ID
+    };
+
+    // Use fetch() to send a POST request
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+        method: 'POST', // Specify the HTTP method
+        headers: {
+            'Content-Type': 'application/json', // Specify the content type
+        },
+        body: JSON.stringify(postData), // Convert the data object to a JSON string
+    })
+        .then(response => response.json()) // Parse the response as JSON
+        .then(data => {
+            console.log('Post created:', data); // Log the response from the server
+            alert(`Post submitted successfully!\n\nID: ${data.id}\nTitle: ${data.title}\nBody: ${data.body}`);
+        })
+        .catch(error => console.error('Error creating post:', error)); // Handle errors
+}
+

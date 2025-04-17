@@ -12,9 +12,12 @@
             <button onclick="getPosts()">Load Posts</button> 
         </div>
         <div id="form">
-            <input placeholder="Add Title" style="display: block;">
-            <textarea placeholder="Add text" style="display: block;"></textarea>
-            <button onclick="" style="display: block;">Submit</button>
+            <input id="userTitle" placeholder="Add Title" style="display: block;">
+            <textarea id="userTextArea" placeholder="Add text" style="display: block;"></textarea>
+            <button onclick="postText()" style="display: block;">Submit</button>
+        </div>
+        <div id="loadComments">
+            <input id="postID" placeholder="Post ID"><button onclick="">Load Comments</button>
         </div>
     </body>
 </htm>
