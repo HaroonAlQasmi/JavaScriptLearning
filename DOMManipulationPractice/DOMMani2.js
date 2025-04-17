@@ -65,14 +65,28 @@ function changeThroughC(){
     let toChange = document.getElementById("screamed");
     toChange.style.backgroundColor = colorValue;
 }
-function resetSection(){
-    let intendedSection = prompt("Enter a section to reload like (div,p,h1,title)");
-    let reload = new XMLHttpRequest();
-    reload.open("GET","section-content.html",true);
-    reload.onload = function (){
-        if (reload.status === 200){
-            document.getElementsByTagName(intendedSection)[0].innerHTML = reload.responseText;
+let originalContent = {};
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Save the original content of all tags
+    let allTags = document.body.getElementsByTagName("*");
+    for (let tag of allTags) {
+        if (!originalContent[tag.tagName]) {
+            originalContent[tag.tagName] = [];
         }
-        reload.send
+        originalContent[tag.tagName].push(tag.innerHTML);
+    }
+});
+
+function resetSection() {
+    let intendedSection = prompt("Enter a section to reload like (div, p, h1, title)").toUpperCase(); // Convert to uppercase
+    if (originalContent[intendedSection]) {
+        let elements = document.getElementsByTagName(intendedSection);
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].innerHTML = originalContent[intendedSection][i]; // Restore original content
+        }
+        alert(`All <${intendedSection}> tags have been reset!`);
+    } else {
+        alert(`No <${intendedSection}> tags found to reset.`);
     }
 }
