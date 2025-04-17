@@ -56,4 +56,22 @@ function postText() {
         })
         .catch(error => console.error('Error creating post:', error)); // Handle errors
 }
+function loadComments() {
+    let postID = document.getElementById("postID").value; // Get the post ID from the input field
 
+    // Fetch comments for the specified post ID
+    fetch(`https://jsonplaceholder.typicode.com/posts/${postID}/comments`) // Dynamically replace {id} with postID
+        .then(response => response.json()) // Parse the response as JSON
+        .then(comments => {
+            const container = document.getElementById("loadComments");
+            comments.forEach(comment => {
+                const userComment = document.createElement('div');
+                userComment.innerHTML = `
+                    <h3>Name: ${comment.name}</h3>
+                    <p>Comment: ${comment.body}</p>
+                `;
+                container.appendChild(userComment); // Append the comment to the container
+            });
+        })
+        .catch(error => console.error('Error fetching comments:', error)); // Handle errors
+}
